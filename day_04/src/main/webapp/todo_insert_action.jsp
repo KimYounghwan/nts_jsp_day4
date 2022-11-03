@@ -1,3 +1,5 @@
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
@@ -8,7 +10,11 @@
 	// JDBC 코딩
 	// 1. jdbc driver로딩 395페이지 중간
 	Class.forName("oracle.jdbc.driver.OracleDriver");
-	
+	// 오라클 접속  396페이지 상단
+	String url = "jdbc:oracle:thin:@localhost:1521:xe";
+	String user = "hr";
+	String password = "hr";
+	Connection conn = DriverManager.getConnection(url, user, password);
 	
 %>
 <!DOCTYPE html>
