@@ -16,14 +16,6 @@
 	Statement stmt = conn.createStatement();
 	String sql = "Select * from todo order by no desc";
 	ResultSet rs = stmt.executeQuery(sql);
-	while(rs.next()){//커서 한칸내림
-		int no = rs.getInt("no");
-		String content = rs.getString("content");
-		Date created_at = rs.getDate("created_at");
-		out.println( no );
-	}
-	stmt.close();
-	conn.close();
 %>
 <!DOCTYPE html>
 <html>
@@ -33,7 +25,28 @@
 </head>
 <body>
 	<h1>할일 목록</h1>
-	
+	<table>
+	  <tr>
+	    <th>번 호</th>
+	    <th>할 일 내 용</th>
+	  </tr>
+	  <%
+	  while(rs.next()){
+			int no = rs.getInt("no");
+			String content = rs.getString("content");
+			Date created_at = rs.getDate("created_at");
+	  %>
+	  <tr>
+	    <td><%= no %></td>
+	    <td><%= content %></td>
+	  </tr>
+	  <% 
+	  }
+	  stmt.close();
+	  conn.close();
+	  %>
+	</table>
+
 
 </body>
 </html>
