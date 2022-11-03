@@ -38,7 +38,7 @@
 	  %>
 	  <tr>
 	    <td><%= no %></td>
-	    <td><%= content %></td>
+	    <td><a href="todo_detail.jsp?no=<%= no %>"><%= content %></a></td>
 	  </tr>
 	  <% 
 	  }
