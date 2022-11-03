@@ -13,7 +13,9 @@
 		<input type="text" name="content">
 		<input type="submit" value="할일저장">
 	</form>
+	<h3>
+		<a href="todo.jsp">할일 관리 메인</a>
+	</h3>
 	
-
 </body>
 </html>
