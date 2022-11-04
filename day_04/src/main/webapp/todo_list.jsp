@@ -29,6 +29,7 @@
 	  <tr>
 	    <th>번 호</th>
 	    <th>할 일 내 용</th>
+	    <th>관 리</th>
 	  </tr>
 	  <%
 	  while(rs.next()){
@@ -39,6 +40,7 @@
 	  <tr>
 	    <td><%= no %></td>
 	    <td><a href="todo_detail.jsp?no=<%= no %>"><%= content %></a></td>
+	    <td><a href="todo_delete_action.jsp?no=<%= no %>">삭제</a></td>
 	  </tr>
 	  <% 
 	  }
