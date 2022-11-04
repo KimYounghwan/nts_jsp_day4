@@ -42,12 +42,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>할일 수정 작업</title>
+<title>가계부 수정 작업</title>
 </head>
 <body>
-	<h1>할일 수정 작업 완료</h1>
+	<h1>가계부 수정 작업 완료</h1>
 	<h3>
-		<a href="todo_list.jsp">할일 목록</a>
+		<a href="list.jsp">가계부 목록</a>
 	</h3>
 	
 </body>
