@@ -41,9 +41,11 @@
 	<%
 	}else{
 	%>
-	<form action="todo_insert_action.jsp" method="post">
+	<form action="todo_update_action.jsp" method="post">
+		할일 번호: <%= no %> <br>
+		<input type="hidden" name="no" value="<%=no%>">
 		할일 내용: 
-		<input type="text" name="content">
+		<input type="text" name="content" value="<%=content%>">
 		<input type="submit" value="할일저장">
 	</form>
 	<%
