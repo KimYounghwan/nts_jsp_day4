@@ -20,15 +20,6 @@
 	Connection conn = DriverManager.getConnection(url, user, password);
 	// statement 생성
 	Statement stmt = conn.createStatement();
-	// sql 작성, 전송 397페이지 하단
-	// Ins,Upda,Del, Create, Alter, Drop -> executeUpdate()
-	// Select -> executeQuery()
-	// 401페이지 상단
-	//String sql = "insert into todo(no,content,created_at)";
-	//sql += " values(TODO_SEQ.NEXTVAL, '"+content+"', SYSDATE ) ";
-	//stmt.executeUpdate(sql);
-	//stmt.close();
-	//conn.close();
 	
 	String sql = "update todo set content = ? where no = ? ";
 	PreparedStatement pstmt = conn.prepareStatement(sql);
