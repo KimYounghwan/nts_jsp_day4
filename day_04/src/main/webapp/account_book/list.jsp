@@ -36,6 +36,7 @@
 	    <th>내 용</th>
 	    <th>금 액</th>
 	    <th>날 짜</th>
+	    <th>관 리</th>
 	  </tr>
 	  <%
 	  while(rs.next()){
@@ -51,6 +52,7 @@
 	    <td><a href="detail.jsp?no=<%= no %>"><%= content %></a></td>
 	    <td><%= money %></td>
 	    <td><%= date_at %></td>
+	    <td><a href="delete.jsp?no=<%= no %>">삭제</a></td>
 	  </tr>
 	  <% 
 	  }
