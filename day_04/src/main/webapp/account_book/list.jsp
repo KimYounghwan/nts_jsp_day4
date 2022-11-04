@@ -25,6 +25,10 @@
 </head>
 <body>
 	<h1>가계부 목록</h1>
+	<h3>
+		<a href="insert_form.jsp">가계부 등록</a>
+	</h3>
+	
 	<table>
 	  <tr>
 	    <th>번 호</th>
@@ -45,7 +49,7 @@
 	    <td><%= no %></td>
 	    <td><%= jongryu %></td>
 	    <td><a href="detail.jsp?no=<%= no %>"><%= content %></a></td>
-	    <td><%= jongryu %></td>
+	    <td><%= money %></td>
 	    <td><%= date_at %></td>
 	  </tr>
 	  <% 
